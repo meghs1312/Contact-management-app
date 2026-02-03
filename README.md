@@ -130,3 +130,32 @@ The SQLite database has two main tables:
 - `email` - Email address (optional)
 - `phone` - Phone number (optional)
 - `created_at` - Timestamp when contact was created
+
+## Database Inspection
+
+1. **Navigate to backend directory:**
+   ```bash
+   cd backend
+   ```
+
+2. **Open the database:**
+   ```bash
+   sqlite3 database.sqlite
+   ```
+
+3. **Common inspection commands:**
+   ```sql
+   .tables                    -- List all tables
+   .schema users             -- Show users table structure
+   .schema contacts          -- Show contacts table structure
+   
+   SELECT * FROM users;      -- View all users
+   SELECT * FROM contacts;   -- View all contacts
+   
+   -- View contacts with usernames
+   SELECT c.name, c.email, c.phone, u.username 
+   FROM contacts c 
+   JOIN users u ON c.user_id = u.id;
+   
+   .exit                     -- Exit sqlite3
+   ```
