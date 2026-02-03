@@ -111,35 +111,19 @@ The backend provides these REST API endpoints:
 
 ## Database Schema
 
-The SQLite database has a `contacts` table with these fields:
+The SQLite database has two main tables:
+
+### Users Table
 - `id` - Auto-incrementing primary key
-- `user_id` - User ID (for user-specific contacts)
+- `username` - Username (required, unique)
+- `email` - Email address (required, unique)
+- `password` - Hashed password (required)
+- `created_at` - Timestamp when user was created
+
+### Contacts Table
+- `id` - Auto-incrementing primary key
+- `user_id` - User ID (foreign key to users table)
 - `name` - Contact name (required)
 - `email` - Email address (optional)
 - `phone` - Phone number (optional)
 - `created_at` - Timestamp when contact was created
-
-## Troubleshooting
-
-**Backend won't start?**
-- Make sure you're in the `backend` folder
-- Check if port 5001 is already in use
-- Run `npm install` to ensure all dependencies are installed
-
-**Frontend won't start?**
-- Make sure you're in the `frontend` folder  
-- Check if port 5173 is already in use
-- Run `npm install` to ensure all dependencies are installed
-
-**Can't add contacts?**
-- Make sure both backend (port 5001) and frontend (port 5173) are running
-- Check the browser console for any error messages
-- Verify the backend is accessible at `http://localhost:5001/api/contacts`
-
-## Contributing
-
-Feel free to fork this project and submit pull requests for any improvements!
-
-## License
-
-This project is open source and available under the MIT License.
