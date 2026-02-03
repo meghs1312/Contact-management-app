@@ -32,10 +32,13 @@ Make sure you have the following installed:
 
 ### Installation
 
-1. **Clone or navigate to the project folder**
+1. **Clone or download the project**
    ```bash
-   cd /path/to/Contact-management-app
+   git clone <repo-url>
+   cd Contact-management-app
    ```
+   
+   *Note: `node_modules` folders are not included in the repository. You'll need to install dependencies as shown below.*
 
 2. **Install backend dependencies**
    ```bash
