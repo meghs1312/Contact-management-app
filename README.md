@@ -4,16 +4,16 @@ A simple and user-friendly contact management application built with React and N
 
 ## Features
 
-- ✅ Add new contacts with name, email, and phone
-- ✅ View all contacts in a clean, organized layout
-- ✅ Search contacts by name, email, or phone number
-- ✅ Edit existing contact information
-- ✅ Delete contacts with confirmation
-- ✅ User authentication (registration and login)
-- ✅ User-specific contacts (each user sees only their contacts)
-- ✅ Clickable table interface for easy contact management
-- ✅ Responsive design that works on desktop and mobile
-- ✅ Modern, clean user interface with red theme
+ Add new contacts with name, email, and phone
+ View all contacts in a clean, organized layout
+ Search contacts by name, email, or phone number
+ Edit existing contact information
+ Delete contacts with confirmation
+ User authentication (registration and login)
+ User-specific contacts (each user sees only their contacts)
+ Clickable table interface for easy contact management
+ Responsive design that works on desktop and mobile
+ Modern, clean user interface with red theme
 
 ## Technologies Used
 
@@ -38,7 +38,7 @@ Make sure you have the following installed:
    cd Contact-management-app
    ```
    
-   *Note: `node_modules` folders are not included in the repository. You'll need to install dependencies as shown below.*
+   
 
 2. **Install backend dependencies**
    ```bash
@@ -76,8 +76,7 @@ You need to run both the backend and frontend servers:
 
 1. **Add a Contact**: Click the "Add Contact" button and fill in the contact information
 2. **Search Contacts**: Use the search bar in the header to find contacts by name, email, or phone
-3. **Edit a Contact**: Click on any contact row in the table to open the edit modal
-4. **Delete a Contact**: Click on a contact to edit, then click the "Delete" button and confirm
+3. **Delete a Contact**: Click on a contact to edit, then click the "Delete" button and confirm
 
 ## Project Structure
 
