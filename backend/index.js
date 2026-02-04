@@ -17,7 +17,7 @@ let db;
 async function startServer() {
     db = await setupDb();
 
-    // User Registration
+    
     app.post('/api/register', async (req, res) => {
         const { username, email, password } = req.body;
         
@@ -48,7 +48,7 @@ async function startServer() {
         }
     });
 
-    // User Login
+    
     app.post('/api/login', async (req, res) => {
         const { username, password } = req.body;
         
@@ -81,7 +81,7 @@ async function startServer() {
         }
     });
 
-    // GET all contacts (protected, user-specific)
+    
     app.get('/api/contacts', authenticateToken, async (req, res) => {
         try {
             const contacts = await db.all(
@@ -94,7 +94,7 @@ async function startServer() {
         }
     });
 
-    // POST new contact (protected, user-specific)
+    
     app.post('/api/contacts', authenticateToken, async (req, res) => {
         const { name, email, phone } = req.body;
         if (!name) {
@@ -111,7 +111,7 @@ async function startServer() {
         }
     });
 
-    // PUT update contact (protected, user-specific)
+   
     app.put('/api/contacts/:id', authenticateToken, async (req, res) => {
         const { id } = req.params;
         const { name, email, phone } = req.body;
@@ -131,7 +131,7 @@ async function startServer() {
         }
     });
 
-    // DELETE contact (protected, user-specific)
+    
     app.delete('/api/contacts/:id', authenticateToken, async (req, res) => {
         const { id } = req.params;
         try {
